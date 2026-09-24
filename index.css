@@ -1,0 +1,78 @@
+@import url('https://googleapis.com');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme Variables */
+:root[data-theme="light"] {
+  --bg-app: #f0f2f5;
+  --bg-card: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+/* Dark Theme Variables */
+:root[data-theme="dark"] {
+  --bg-app: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* Utility Layout Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button Base Styles */
+button {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
