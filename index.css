@@ -1,0 +1,126 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.app-layout {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.table-container {
+  background: rgb(192, 171, 171);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #1e293b;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.responsive-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 12px;
+  font-weight: 600;
+}
+
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+  background-color: #f8fafc;
+}
+
+.fw-semibold {
+  font-weight: 500;
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.btn:disabled {
+  background-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px;
+    background: #f8fafc;
+  }
+  td {
+    border-bottom: none;
+    padding: 6px 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  td::before {
+    content: attr(data-label) "";
+    font-weight: 600;
+    color: #64748b;
+  }
+}
